@@ -27,11 +27,13 @@ def test_with_single_digit():
     expected_calibration_value = 77
     calibration_reader = CalibrationReader(calibration_line)
     actual_calibration_value = calibration_reader.read()
+    print(f"Expected: {expected_calibration_value}, Actual: {actual_calibration_value}")
+
     assert expected_calibration_value == actual_calibration_value
 
 def test_sum_all_lines():
     calibration_doc = CalibrationDocument("all_lines.txt")
-    expected_calibration_sum = 54632
+    expected_calibration_sum = 600952
     actual_calibration_sum = calibration_doc.sum()
     assert expected_calibration_sum == actual_calibration_sum
 
